@@ -1,5 +1,5 @@
 ﻿<div id="modalForm">
-    <div class="modal-content" style="max-height: 768px; overflow-y: scroll;">
+    <div class="modal-content">
         <div class="modal-header">
             <h2>Formulário de checkout</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -8,117 +8,141 @@
         </div>
         <div class="modal-body">
             <div class="container">
-                <div class="py-5 text-center">
-                    <p class="lead">Formulário para Checkout.</p>
-                </div>
-                <div class="row" style="width: 100%">
-                    <div class="col-md-8 order-md-1" style="width: 100%">
+
+                <div class="row">
+
+                    <div class="col order-md-1">
+
                         <h4 class="mb-3">Dados Pessoais</h4>
+
                         <form id="form" method="post">
-                            <div class="row" style="padding: 10px;">
-                                <div class="col-md-8 mb-3">
-                                    <label for="primeiroNome">Nome</label>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label" for="primeiroNome">Nome</label>
                                     <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="" value="" required>
-                                    <div class="invalid-feedback">
-                                        É obrigatório inserir um nome válido.
-                                    </div>
+
                                 </div>
-                                <div class="col-md-8 mb-3">
-                                    <label for="sobrenome">Sobrenome</label>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="sobrenome">Sobrenome</label>
                                     <input type="text" class="form-control" id="LastName" name="LastName" placeholder="" value="" required>
-                                    <div class="invalid-feedback">
-                                        É obrigatório inserir um sobre nome válido.
-                                    </div>
                                 </div>
+
                             </div>
-                            <div class="col-md-8 mb-3">
-                                <label for="email">Telefone</label>
-                                <input type="email" class="form-control" id="BillingPhone" name="BillingPhone">
-                                <div class="invalid-feedback">
-                                    Por favor, um telefone válido.
+
+                            <div class="row">
+
+                                <div class="col-md-8 mb-3">
+
+                                    <label class="form-label" for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="BillingEmail" name="BillingEmail">
+
                                 </div>
-                            </div>
-                            <div class="col-md-8 mb-3">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="BillingEmail" name="BillingEmail">
-                                <div class="invalid-feedback">
-                                    Por favor, insira um endereço de e-mail válido, para atualizações de entrega.
+
+                                <div class="col-md-4 mb-3">
+
+                                    <label class="form-label" for="telefone">Telefone</label>
+                                    <input type="number" class="form-control" id="BillingPhone" name="BillingPhone">
+
                                 </div>
+
+
                             </div>
+
                             <hr class="mb-4">
+
                             <h4 class="mb-3">Endereço de cobrança</h4>
-                            <div class="col-md-8 mb-3">
-                                <label for="endereco">Logradouro</label>
-                                <input type="text" class="form-control" id="BillingAddress1" name="BillingAddress" required>
-                                <div class="invalid-feedback">
-                                    Por favor, insira seu endereço de entrega.
+
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label" for="cep">CEP</label>
+                                    <input type="text" class="form-control" id="ZipCode" name="BillingPostalCode" placeholder="" required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label class="form-label" for="endereco">Rua</label>
+                                    <input type="text" class="form-control" id="BillingAddress1" name="BillingAddress" required>
+
                                 </div>
                             </div>
-                            <div class="col-md-8 mb-3">
-                                <label for="endereco2">Número</label>
-                                <input type="text" class="form-control" id="BillingAddress2" name="BillingAddress2">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cep">Estado</label>
-                                <input type="text" class="form-control" id="State" name="BillingState" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Por favor, insira um estado válido.
+                            <div class="row">
+
+
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label" for="cep">Estado</label>
+                                    <input type="text" class="form-control" id="State" name="BillingState" placeholder="" required>
+
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cep">Cidade</label>
-                                <input type="text" class="form-control" id="City" name="BillingCity" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    É obrigatório inserir uma cidade.
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="cep">Cidade</label>
+                                    <input type="text" class="form-control" id="City" name="BillingCity" placeholder="" required>
+
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cep">CEP</label>
-                                <input type="text" class="form-control" id="ZipCode" name="BillingPostalCode" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    É obrigatório inserir um CEP.
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label" for="endereco2">Número</label>
+                                    <input type="text" class="form-control" id="BillingAddress2" name="BillingAddress2">
                                 </div>
+
                             </div>
+
                             <hr class="mb-4">
-                            <h4 class="mb-3">Insira um valor em Real que deseja</h4>
-                            <div class="col-md-8 mb-3">
-                                <label for="cc-nome">Valor:</label>
-                                <input type="text" class="form-control" id="Valor" name="Value" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    O valor é obrigatório.
+                            <h4 class="mb-3">Insira um valor em Reais que deseja</h4>
+
+                            <div class="row">
+
+                                <div class="col mb-3">
+                                    <label for="cc-nome">Valor:</label>
+                                    <input type="text" class="form-control" id="Valor" name="Value" placeholder="" required>
                                 </div>
+
                             </div>
+                            
                             <hr class="mb-4">
+
                             <h4 class="mb-3">Dados de Cobrança</h4>
-                            <div class="col-md-8 mb-3">
-                                <label for="cc-nome">Nome no cartão</label>
-                                <input type="text" class="form-control" id="CreditCardName" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    O nome que está no cartão é obrigatório.
+
+                            <div class="row">
+
+                                <div class="col mb-3">
+                                    <label for="cc-nome">Nome no cartão</label>
+                                    <input type="text" class="form-control" id="CreditCardName" placeholder="" required>
+
                                 </div>
+
                             </div>
-                            <div class="col-md-8 mb-3">
-                                <label for="cc-numero">Número do cartão de crédito</label>
-                                <input type="number" class="form-control" id="CreditCardNumber" name="CreditCardNumber" maxlength="16" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    O número do cartão de crédito é obrigatório.
+
+                            <div class="row">
+
+                                <div class="col-6 mb-3">
+                                    <label for="cc-numero">Número do cartão de crédito</label>
+                                    <input type="number" class="form-control" id="CreditCardNumber" name="CreditCardNumber" maxlength="16" placeholder="" required>
+
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cc-expiracao">Data de expiração</label>
-                                <input type="number" class="form-control" id="ExpMonth" name="ExpMonth" maxlength="2" placeholder="" required>
-                                <input type="number" class="form-control" id="ExpYear" name="ExpYear" maxlength="4" required>
-                                <div class="invalid-feedback">
-                                    Data de expiração é obrigatória.
+
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-expiracao">Data de expiração</label>
+                                    <input type="number" class="form-control" id="ExpMonth" name="ExpMonth" maxlength="2" placeholder="" required>
+                                    <input type="number" class="form-control" id="ExpYear" name="ExpYear" maxlength="4" required>
+
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cc-cvv">CVV</label>
-                                <input type="number" class="form-control" name="CvvNumber" maxlength="3" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Código de segurança é obrigatório.
+
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-cvv">CVV</label>
+                                    <input type="number" class="form-control" name="CvvNumber" maxlength="3" placeholder="" required>
+
                                 </div>
-                            </div>
+
+
+                            </div>                            
+                            
                         </form>
                     </div>
                 </div>
@@ -131,89 +155,16 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
 <script src="~/js/jquery.maskMoney.js" type="text/javascript"></script>
+<script src="~/js/ServicoEndereco/CEPService.js" type="text/javascript"></script>
 
-<style>
-
-    .form-control {
-        background-color: ghostwhite !important;
-    }
-
-</style>
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
-
-        $("#Valor").maskMoney({
-            prefix: "R$:",
-            decimal: ",",
-            thousands: "."
-        });
-
-        function limpa_formulário_cep() {
-            // Limpa valores do formulário de cep.
-            $("#BillingAddress1").val("");
-            $("#Neighborhood").val("");
-            $("#City").val("");
-            $("#State").val("");
-        }
-
-        //Quando o campo cep perde o foco.
-        $("#ZipCode").blur(function () {
-
-            //Nova variável "cep" somente com dígitos.
-            var cep = $(this).val().replace(/\D/g, '');
-
-            //Verifica se campo cep possui valor informado.
-            if (cep != "") {
-
-                //Expressão regular para validar o CEP.
-                var validacep = /^[0-9]{8}$/;
-
-                //Valida o formato do CEP.
-                if (validacep.test(cep)) {
-
-                    //Preenche os campos com "..." enquanto consulta webservice.
-                    $("#BillingAddress1").val("...");
-                    $("#Neighborhood").val("...");
-                    $("#City").val("...");
-                    $("#State").val("...");
-
-                    //Consulta o webservice viacep.com.br/
-                    $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
-
-                        if (!("erro" in dados)) {
-                            //Atualiza os campos com os valores da consulta.
-                            $("#BillingAddress1").val(dados.logradouro);
-                            $("#Neighborhood").val(dados.bairro);
-                            $("#City").val(dados.localidade);
-                            $("#State").val(dados.uf);
-                        } //end if.
-                        else {
-                            //CEP pesquisado não foi encontrado.
-                            limpa_formulário_cep();
-                            alert("CEP não encontrado.");
-                        }
-                    });
-                } //end if.
-                else {
-                    //cep é inválido.
-                    limpa_formulário_cep();
-                    alert("Formato de CEP inválido.");
-                }
-            } //end if.
-            else {
-                //cep sem valor, limpa formulário.
-                limpa_formulário_cep();
-            }
-        });
-    });
-
     $("#btnPayment").click(function (e) {
         //Serialize the form datas.
-        var valdata = $("#form").serialize();
+        var valdata = $("#form").serialize(); // serializando o form do mvc
         //to get alert popup
         alert(valdata);
         $.ajax({
